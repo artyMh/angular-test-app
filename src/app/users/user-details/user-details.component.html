@@ -1,0 +1,27 @@
+<h1>User details</h1>
+<ng-container *ngIf="user !== undefined">
+  <div class="user_details">
+    <div class="avatar">
+      <div class="frame">
+        <img src="{{ user.avatar }}" />
+      </div>
+    </div>
+    <div class="detail_row">
+      <div class="name">Id</div>
+      <div class="value">{{ user.id }}</div>
+    </div>
+    <div class="detail_row">
+      <div class="name">First name</div>
+      <div class="value">{{ user.first_name }}</div>
+    </div>
+    <div class="detail_row">
+      <div class="name">Last name</div>
+      <div class="value">{{ user.last_name }}</div>
+    </div>
+    <div class="detail_row">
+      <div class="name">Email</div>
+      <div class="value">{{ user.email }}</div>
+    </div>
+  </div>
+</ng-container>
+<a routerLink="/edit/{{ user.id }}">Edit user</a>

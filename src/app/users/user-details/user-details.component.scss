@@ -1,0 +1,33 @@
+.user_details {
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    .frame {
+      border: 3px solid #d4d4d4;
+      border-radius: 50%;
+      height: 128px;
+      width: 128px;
+      overflow: hidden;
+    }
+  }
+
+  .detail_row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .name {
+      display: inline-block;
+      font-weight: 600;
+    }
+    .value {
+      display: inline-block;
+    }
+  }
+}

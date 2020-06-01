@@ -1,0 +1,62 @@
+<form #userForm="ngForm" (ngSubmit)="onSubmit()" class="form">
+  <input type="hidden" id="id" name="id" value="{{user.id}}" [(ngModel)]="user.id" />
+  <div class="form_group">
+    <label for="first_name">First name:</label>
+    <input
+      id="first_name"
+      name="first_name"
+      type="text"
+      required
+      pattern="[A-Za-z]{1,10}"
+      [(ngModel)]="user.first_name"
+      value="{{user.first_name}}"
+      #first_name="ngModel"
+    />
+    <div class="form_error" [hidden]="first_name.valid">First name is required and should be not longer than 10 characters!</div>
+  </div>
+  <div class="form_group">
+    <label for="first_name">Last name:</label>
+    <input
+      id="last_name"
+      name="last_name"  
+      type="text"
+      required
+      pattern="[A-Za-z]{1,10}"
+      [(ngModel)]="user.last_name"
+      value="{{user.last_name}}"
+      #last_name="ngModel"
+    />
+    <div class="form_error" [hidden]="last_name.valid">Last name is required and should be not longer than 10 characters!</div>
+  </div>
+  <div class="form_group">
+    <label for="email">Email:</label>
+    <input
+      id="email"
+      name="email"  
+      type="email"
+      required
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+      [(ngModel)]="user.email"
+      value="{{user.email}}"
+      #email="ngModel"
+    />
+    <div class="form_error" [hidden]="email.valid">Email is required and should be valid!</div>
+  </div>
+  <div class="form_group">
+    <label for="email">Avatar URL:</label>
+    <input
+      id="avatar"
+      name="avatar"  
+      type="url"
+      pattern="https?://.+"
+      required
+      [(ngModel)]="user.avatar"
+      value="{{user.avatar}}"
+      #avatar="ngModel"
+    />
+    <div class="form_error" [hidden]="avatar.valid">Avatar url is required and should be valid!</div>
+  </div>
+  <div class="form_submit">
+    <button type="submit" class="btn btn-success" [disabled]="!userForm.valid">Submit</button>
+  </div>
+</form>

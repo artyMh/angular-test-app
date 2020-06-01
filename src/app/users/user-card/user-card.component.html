@@ -1,0 +1,12 @@
+<div class="user-card">
+  <div class="user-avatar">
+    <img [src]="user.avatar" />
+  </div>
+  <span class="user-name">
+    <a routerLink="/detail/{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a>
+  </span>
+  <div class="user-actions">
+    <a routerLink="/edit/{{ user.id }}"><img src="assets/icons/edit.svg"></a>
+    <a (click)="deleteUser.emit(user.id)"><img src="assets/icons/delete.svg"></a>
+  </div>
+</div>

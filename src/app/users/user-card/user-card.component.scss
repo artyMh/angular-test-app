@@ -1,0 +1,60 @@
+.user-card {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  height: 40px;
+  width: 300px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  transition: all 0.14s ease-in-out;
+  line-height: 24px;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0.35);
+  }
+
+  .user-avatar {
+    border: 3px solid rgb(212, 212, 212);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  .user-name {
+    margin-left: 15px;
+  }
+
+  .user-actions {
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+    min-width: 70px;
+    justify-content: space-between;
+
+    img {
+      width: 16px;
+    }
+
+    a,
+    button {
+      padding-top: 5px;
+      border-radius: 8px;
+      width: 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.1s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 1px 7px rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+<h1>Users list</h1>
+<app-user-card
+    *ngFor="let user of usersStore.users$ | async"
+    [user]="user"
+    (deleteUser)="usersStore.deleteUser($event)"
+></app-user-card>
